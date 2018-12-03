@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Upload de fichiers
+
+        // register form
+        form(method='POST' action='/monupload' enctype="multipart/form-data")
+          div.form-group
+            input#name.form-control(type='file', name='monfichier', accept="image/png", multiple)
+          button.btn.btn-primary(type='submit') Envoyer
+
+
